@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Weiterleitung …</title>
+    <meta name="robots" content="noindex" />
+    <script>
+      (function () {
+        var basePath = "/Thai-Food-Orchidee";
+        var locationPath = window.location.pathname || "/";
+        var relativePath = locationPath.startsWith(basePath)
+          ? locationPath.slice(basePath.length)
+          : locationPath;
+        if (!relativePath.startsWith("/")) {
+          relativePath = "/" + relativePath;
+        }
+        var redirectTarget = relativePath + (window.location.search || "") + (window.location.hash || "");
+        if (redirectTarget && redirectTarget !== "/") {
+          sessionStorage.setItem("redirectPath", redirectTarget);
+        }
+        window.location.replace(basePath + "/");
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/Thai-Food-Orchidee/" />
+    </noscript>
+    <p>Weiterleitung …</p>
+  </body>
+</html>
