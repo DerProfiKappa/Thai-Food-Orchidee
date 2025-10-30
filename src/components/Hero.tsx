@@ -102,15 +102,17 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-4 left-0 right-0 z-10 flex justify-center">
+      <div className="absolute bottom-0 left-0 right-0 z-10 flex justify-center">
         <button
           onClick={() => scrollToSection("features")}
-          className="text-white animate-bounce cursor-pointer transition-all duration-300 hover:scale-110 group relative"
+          className="text-white cursor-pointer transition-transform duration-300 hover:scale-110"
           aria-label="Scroll down"
         >
-          <ChevronDown className="w-8 h-8 relative z-10" />
-          <div className="absolute inset-0 blur-xl bg-thai-gold opacity-0 group-hover:opacity-60 transition-opacity duration-300 animate-pulse" />
-          <div className="absolute inset-0 blur-2xl bg-thai-gold-light opacity-0 group-hover:opacity-40 transition-opacity duration-500 scale-150" />
+          <span className="relative flex h-16 w-16 items-center justify-center">
+            <span className="absolute inset-0 rounded-full bg-thai-gold/35 blur-xl animate-pulse" />
+            <span className="absolute inset-0 rounded-full bg-thai-gold-light/25 blur-2xl animate-[pulse_4s_ease-in-out_infinite]" />
+            <ChevronDown className="relative z-10 h-8 w-8 animate-bounce" />
+          </span>
         </button>
       </div>
     </section>
