@@ -17,6 +17,13 @@ export default {
         display: ['Playfair Display', 'serif'],
         body: ['Inter', 'sans-serif'],
       },
+      fontSize: {
+        "3xl": ["1.875rem", { lineHeight: "1.2" }],
+        "4xl": ["2.25rem", { lineHeight: "1.2" }],
+        "5xl": ["3rem", { lineHeight: "1.2" }],
+        "6xl": ["3.75rem", { lineHeight: "1.15" }],
+        "7xl": ["4.5rem", { lineHeight: "1.15" }],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
