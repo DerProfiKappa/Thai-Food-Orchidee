@@ -37,9 +37,11 @@ const Navigation = () => {
   }, [isHome]);
 
   useEffect(() => {
-    setDisableTransition(true);
-    const id = requestAnimationFrame(() => setDisableTransition(false));
-    return () => cancelAnimationFrame(id);
+    if (!isHome) {
+      setDisableTransition(true);
+    } else {
+      setDisableTransition(false);
+    }
   }, [isHome]);
 
   const solidBackground = isScrolled || !isHome;
