@@ -1,64 +1,67 @@
-import { Suspense, lazy } from "react";
-
-const Feature3DIcon = lazy(() => import("@/components/3d/Feature3DIcon"));
-
 const features = [
   {
-    icon3d: 'chili' as const,
+    icon: "flame",
     title: "Authentische Rezepte",
     description: "Traditionelle Aromen direkt aus Bangkok",
   },
   {
-    icon3d: 'wok' as const,
+    icon: "utensils",
     title: "Frische Zutaten",
     description: "Lokal bezogen und biologisch, wo möglich",
   },
   {
-    icon3d: 'leaf' as const,
+    icon: "leaf",
     title: "Perfekte Atmosphäre",
     description: "Gemütlich, elegant und einladend",
   },
 ];
 
+const iconMap: Record<string, string> = {
+  flame: "🔥",
+  utensils: "🥢",
+  leaf: "🍃",
+};
+
 const Features = () => {
   return (
-    <section id="features" className="py-20 bg-gradient-to-b from-background to-muted/30">
+    <section id="features" className="bg-gradient-to-b from-background to-muted/30 py-20">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-thai-red via-thai-gold to-thai-green bg-clip-text text-transparent">
+        <div className="mb-16 text-center animate-fade-in">
+          <div className="inline-flex items-center gap-2 rounded-full bg-gradient-gold px-4 py-2 text-sm font-semibold text-thai-dark">
+            Unser Versprechen
+          </div>
+          <h2 className="mt-6 text-4xl font-bold md:text-5xl">
             Warum Thai-Nippon-Sushi-Bar?
           </h2>
-          <p className="text-muted-foreground text-lg">Erleben Sie authentische thailändische Küche</p>
+          <p className="mt-4 text-lg text-muted-foreground">
+            Erleben Sie authentische thailändische Küche mit modernen Akzenten
+          </p>
         </div>
-        
-        <div className="grid md:grid-cols-3 gap-8">
+
+        <div className="grid gap-8 md:grid-cols-3">
           {features.map((feature, index) => (
             <div
-              key={index}
-              className="group relative overflow-hidden text-center p-8 rounded-2xl bg-card shadow-card hover:shadow-elegant transition-all duration-500 hover:-translate-y-2 animate-slide-up border border-border/50"
+              key={feature.title}
+              className="group relative overflow-hidden rounded-2xl border border-border/40 bg-card p-8 text-center shadow-card transition-all duration-500 hover:-translate-y-2 hover:shadow-elegant"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
-              {/* Glasmorphism overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-thai-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              {/* 3D Icon */}
-              <div className="relative w-32 h-32 mx-auto mb-6 transition-transform duration-500 group-hover:scale-110">
-                <Suspense fallback={
-                  <div className="w-full h-full rounded-full bg-primary/10 animate-pulse" />
-                }>
-                  <Feature3DIcon type={feature.icon3d} />
-                </Suspense>
+              <div className="absolute inset-0 bg-gradient-to-br from-thai-gold/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
+              <div className="relative mx-auto mb-6 flex h-28 w-28 items-center justify-center rounded-3xl bg-gradient-to-br from-thai-gold to-thai-gold-light text-thai-dark shadow-glow transition-all duration-500 group-hover:scale-105 group-hover:shadow-elegant">
+                <span className="text-5xl">
+                  {iconMap[feature.icon] ?? "✨"}
+                </span>
+                <div className="absolute inset-[12%] rounded-2xl border border-white/40" />
               </div>
-              
-              <h3 className="relative text-2xl font-bold mb-3 text-foreground group-hover:text-thai-gold transition-colors duration-300">
+
+              <h3 className="relative text-2xl font-bold text-foreground transition-colors duration-300 group-hover:text-thai-gold">
                 {feature.title}
               </h3>
-              <p className="relative text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+              <p className="relative mt-3 text-muted-foreground transition-colors duration-300 group-hover:text-foreground">
                 {feature.description}
               </p>
-              
-              {/* Decorative element */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-gold transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+
+              <div className="absolute bottom-0 left-0 right-0 h-1 origin-left transform bg-gradient-gold transition-transform duration-500 group-hover:scale-x-100" />
             </div>
           ))}
         </div>
