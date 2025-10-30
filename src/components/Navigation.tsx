@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState } from "react";
+﻿import { useEffect, useLayoutEffect, useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
@@ -69,9 +69,9 @@ const Navigation = () => {
             }}
             className="flex items-center gap-3 hover:opacity-80 transition-opacity"
           >
-            <img src={logo} alt="Thai-Nippon-Sushi-Bar" className="w-10 h-10" />
+            <img src={logo} alt="Thai Food Orchidee" className="w-10 h-10" />
             <span className={`text-xl font-bold ${solidBackground ? "text-foreground" : "text-white"}`}>
-              Thai-Nippon-Sushi-Bar
+              Thai Food Orchidee
             </span>
           </button>
 
@@ -130,3 +130,5 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
+

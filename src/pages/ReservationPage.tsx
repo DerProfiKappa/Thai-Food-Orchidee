@@ -29,7 +29,7 @@ const ReservationPage = () => {
     const formattedDate = date ? new Date(date).toLocaleDateString("de-DE") : "";
 
     const mailto = [
-      "mailto:ThaiNipponSushiBar@gmail.com",
+      "mailto:thaifoodorchidee92atgmail.com",
       `subject=Reservierungsanfrage von ${encodeURIComponent(name)}`,
       "body=" +
         encodeURIComponent(
@@ -68,7 +68,7 @@ const ReservationPage = () => {
             Reservierung
           </div>
           <h1 className="mt-6 text-4xl font-bold md:text-6xl">
-            Ihren Tisch bei Thai-Nippon-Sushi-Bar sichern
+            Ihren Tisch bei Thai Food Orchidee sichern
           </h1>
           <p className="mt-4 text-lg text-muted-foreground md:text-xl">
             Ob romantisches Dinner, Geschäftsessen oder Familienfeier – lassen Sie uns wissen,
@@ -92,10 +92,10 @@ const ReservationPage = () => {
                   <div>
                     <p className="font-semibold text-foreground">Telefon</p>
                     <a
-                      href="tel:015563136888"
+                      href="tel:0303047697"
                       className="text-muted-foreground transition-colors hover:text-primary"
                     >
-                      015563 136888
+                      030 3047697
                     </a>
                   </div>
                 </div>
@@ -104,10 +104,10 @@ const ReservationPage = () => {
                   <div>
                     <p className="font-semibold text-foreground">E-Mail</p>
                     <a
-                      href="mailto:ThaiNipponSushiBar@gmail.com"
+                      href="mailto:thaifoodorchidee92atgmail.com"
                       className="text-muted-foreground transition-colors hover:text-primary"
                     >
-                      ThaiNipponSushiBar@gmail.com
+                      thaifoodorchidee92atgmail.com
                     </a>
                   </div>
                 </div>
@@ -123,15 +123,8 @@ const ReservationPage = () => {
                 <div className="flex items-start gap-3">
                   <Clock className="mt-1 h-5 w-5 text-primary" />
                   <div>
-                    <p className="font-semibold text-foreground">Montag – Freitag</p>
-                    <p>11:30 – 22:30 Uhr</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Clock className="mt-1 h-5 w-5 text-primary" />
-                  <div>
-                    <p className="font-semibold text-foreground">Samstag & Sonntag</p>
-                    <p>12:00 – 23:00 Uhr</p>
+                    <p className="font-semibold text-foreground">Täglich</p>
+                    <p>12:00 – 22:00 Uhr</p>
                   </div>
                 </div>
               </div>

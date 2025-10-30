@@ -1,4 +1,4 @@
-import { useState, useEffect, Suspense, lazy } from "react";
+﻿import { useState, useEffect, Suspense, lazy } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
@@ -40,7 +40,7 @@ const Hero = () => {
           >
             <img
               src={image}
-              alt={`Thai-Nippon-Sushi-Bar ${index + 1}`}
+              alt={`Thai Food Orchidee ${index + 1}`}
               className={`w-full h-full object-cover transition-transform ${
                 index === currentImageIndex ? "scale-110" : "scale-100"
               }`}
@@ -79,14 +79,14 @@ const Hero = () => {
         <div className="bg-gradient-to-b from-black/40 to-transparent backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-elegant">
           <img
             src={logo}
-            alt="Thai-Nippon-Sushi-Bar Logo"
+            alt="Thai Food Orchidee Logo"
             className="w-24 h-24 mx-auto mb-6 drop-shadow-2xl animate-pulse"
           />
           <h1 className="text-5xl md:text-7xl font-bold mb-6 drop-shadow-lg bg-gradient-to-r from-white via-thai-gold-light to-white bg-clip-text text-transparent">
-            Thai-Nippon-Sushi-Bar
+            Thai Food Orchidee
           </h1>
           <p className="text-2xl md:text-4xl mb-4 font-light text-thai-gold-light">
-            Authentische thailändische Küche im Herzen von Berlin
+            Authentische thailändische Küche am Kaiserdamm in Berlin
           </p>
           <p className="text-lg md:text-xl mb-10 text-gray-200 max-w-2xl mx-auto">
             Erleben Sie die Aromen Thailands — frisch, lebendig und unvergesslich
@@ -120,3 +120,7 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
+
+

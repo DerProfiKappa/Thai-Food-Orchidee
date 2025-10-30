@@ -1,4 +1,4 @@
-import interiorImage from "@/assets/restaurant-interior.jpg";
+﻿import interiorImage from "@/assets/restaurant-interior.jpg";
 
 const About = () => {
   return (
@@ -13,7 +13,7 @@ const About = () => {
             <div className="relative overflow-hidden rounded-3xl shadow-elegant">
               <img
                 src={interiorImage}
-                alt="Thai-Nippon-Sushi-Bar Restaurant Interieur"
+                alt="Thai Food Orchidee Restaurant Interieur"
                 className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
               />
               {/* Glasmorphism overlay on hover */}
@@ -32,28 +32,24 @@ const About = () => {
             
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Thai-Nippon-Sushi-Bar entstand aus dem Traum einer thailändischen Familie, 
-                die authentischen Aromen Bangkoks mit der pulsierenden Stadt Berlin zu teilen. 
-                Nach Jahren der Perfektionierung traditioneller Rezepte, die über Generationen 
-                weitergegeben wurden, haben wir unsere Türen geöffnet, um Ihnen das authentischste 
-                thailändische Esserlebnis außerhalb Thailands zu bieten.
+                Thai Food Orchidee ist ein Familienbetrieb im Berliner Westend. Mitten an der Reichsstraße
+                servieren wir seit vielen Jahren die Lieblingsrezepte unserer Familie – würzig, frisch und
+                unverfälscht wie in den Straßenküchen Bangkoks.
               </p>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Jedes Gericht, das wir servieren, wird mit Leidenschaft zubereitet, unter 
-                Verwendung frischester Zutaten und traditionsreicher Kochtechniken. Von unseren 
-                duftenden Currys bis zu unserem perfekt ausbalancierten Pad Thai erzählt jeder 
-                Teller eine Geschichte des thailändischen kulinarischen Erbes.
+                Wir arbeiten mit regionalen Zutaten, importieren unsere Gewürzmischungen direkt aus Thailand und
+                kombinieren traditionelle Kochtechniken mit modernen Ideen. Ob klassisches Pad Thai oder feines
+                Curry – jedes Gericht wird mit viel Liebe und Erfahrung zubereitet.
               </p>
               
               <div className="relative pl-6 py-6 border-l-4 border-thai-gold bg-gradient-to-r from-thai-gold/10 to-transparent rounded-r-xl">
                 <div className="absolute -left-3 top-6 w-6 h-6 bg-thai-gold rounded-full" />
                 <blockquote className="italic text-xl text-foreground font-medium">
-                  "Thailändisches Essen zu kochen ist nicht nur unser Job — es ist unsere Art, 
-                  Glück zu teilen."
+                  "Gute Küche entsteht dann, wenn man Menschen mit einem Lächeln nach Hause schickt."
                 </blockquote>
                 <cite className="block mt-2 text-sm text-muted-foreground not-italic">
-                  — Chef Somchai, Gründer
+                  – Familie Nguyen, Inhaber von Thai Food Orchidee
                 </cite>
               </div>
             </div>

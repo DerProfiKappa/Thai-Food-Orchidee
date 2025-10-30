@@ -17,9 +17,9 @@
 ];
 
 const iconMap: Record<string, string> = {
-  flame: "\u{1F525}",
-  utensils: "\u{1F962}",
-  leaf: "\u{1F343}",
+  flame: "🔥",
+  utensils: "🥢",
+  leaf: "🍃",
 };
 
 const Features = () => {
@@ -31,7 +31,7 @@ const Features = () => {
             Unser Versprechen
           </div>
           <h2 className="mt-6 text-4xl font-bold md:text-5xl">
-            Warum Thai-Nippon-Sushi-Bar?
+            Warum Thai Food Orchidee?
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Erleben Sie authentische thailändische Küche mit modernen Akzenten
@@ -48,7 +48,7 @@ const Features = () => {
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-thai-gold/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
               <div className="relative mx-auto mb-6 flex h-28 w-28 items-center justify-center rounded-3xl bg-gradient-to-br from-thai-gold to-thai-gold-light text-thai-dark shadow-glow transition-all duration-500 group-hover:scale-105 group-hover:shadow-elegant">
-                <span className="text-5xl">{iconMap[feature.icon] ?? "\u2728"}</span>
+                <span className="text-5xl">{iconMap[feature.icon] ?? "✨"}</span>
                 <div className="absolute inset-[12%] rounded-2xl border border-white/40 transition-all duration-500 group-hover:border-white/60" />
               </div>
 
