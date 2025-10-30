@@ -6,6 +6,7 @@ import logo from "@/assets/logo.png";
 const navItems = [
   { label: "Startseite", to: "/" },
   { label: "Speisekarte", to: "/menu" },
+  { label: "Reservierung", to: "/reservation" },
   { label: "Über uns", to: "/about" },
   { label: "Galerie", to: "/gallery" },
   { label: "Kontakt", to: "/contact" },

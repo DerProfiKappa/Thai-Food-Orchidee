@@ -1,4 +1,5 @@
 import { useState, useEffect, Suspense, lazy } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import heroImage from "@/assets/hero-thai-food.jpg";
@@ -12,6 +13,7 @@ const ThreeScene = lazy(() => import("@/components/3d/ThreeScene"));
 const Hero = () => {
   const images = [heroImage, gallery1, gallery2, gallery3];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -91,7 +93,7 @@ const Hero = () => {
           </p>
           <Button
             size="lg"
-            onClick={() => scrollToSection("contact")}
+            onClick={() => navigate("/reservation")}
             className="bg-gradient-to-r from-thai-gold to-thai-gold-light hover:shadow-glow text-thai-dark px-8 py-6 text-lg rounded-full shadow-elegant transition-all duration-500 hover:scale-110 font-semibold"
           >
             Reservieren Sie jetzt
